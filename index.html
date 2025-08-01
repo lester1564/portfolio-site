@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lester Rivarez | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1a365d',
+                        electric: '#3b82f6',
+                        softblue: '#e2e8f0',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="assets/images/lester-logo.png">
+    <meta name="description" content="Lester Rivarez - Virtual Assistant, Technical Support Specialist, and Web Administrator. Helping businesses thrive online with expert support and seamless web management.">
+    <meta property="og:title" content="Lester Rivarez | Portfolio">
+    <meta property="og:description" content="Virtual Assistant, Technical Support Specialist, and Web Administrator. Helping businesses thrive online.">
+    <meta property="og:image" content="assets/images/picture.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lester Rivarez | Portfolio">
+    <meta name="twitter:description" content="Virtual Assistant, Technical Support Specialist, and Web Administrator. Helping businesses thrive online.">
+    <meta name="twitter:image" content="assets/images/picture.png">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="nav-glass fixed w-full z-50 px-6 py-4 flex items-center justify-between">
+        <div class="logo flex items-center"></div>
+            <img src="assets/images/lester-logo.png" alt="Lester Rivarez Logo" class="h-20 w-auto mr-2 logo-glow">
+            </div>
+        
+        <div class="nav-links hidden md:flex items-center space-x-8">
+            <a href="#home" class="nav-link active text-navy dark:text-white hover:text-electric dark:hover:text-electric">Home</a>
+            <a href="#about" class="nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric">About</a>
+            <a href="#projects" class="nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric">Projects</a>
+            <a href="#skills" class="nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric">Skills</a>
+            <a href="#testimonials" class="nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric">Testimonials</a>
+            <a href="#contact" class="nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric">Contact</a>
+            <a href="resume.html" class="nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric" target="_blank" rel="noopener">Resume</a>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <button id="darkModeToggle" class="w-10 h-10 rounded-full flex items-center justify-center bg-softblue dark:bg-navy transition-all duration-300 hover:shadow-lg">
+                <i class="fas fa-moon text-navy dark:hidden"></i>
+                <i class="fas fa-sun text-yellow-300 hidden dark:block"></i>
+            </button>
+            
+            <button class="md:hidden text-navy dark:text-white" id="mobileMenuBtn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed top-0 left-0 w-full h-0 bg-white dark:bg-navy z-40 overflow-hidden transition-all duration-500 flex flex-col items-center justify-center">
+        <button id="closeMenuBtn" class="absolute top-6 right-6 text-navy dark:text-white">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+        <div class="flex flex-col items-center space-y-8 text-xl">
+            <a href="#home" class="mobile-nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric">Home</a>
+            <a href="#about" class="mobile-nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric">About</a>
+            <a href="#projects" class="mobile-nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric">Projects</a>
+            <a href="#skills" class="mobile-nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric">Skills</a>
+            <a href="#testimonials" class="mobile-nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric">Testimonials</a>
+            <a href="#contact" class="mobile-nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric">Contact</a>
+            <a href="#" class="mobile-nav-link text-navy dark:text-white hover:text-electric dark:hover:text-electric">Resume</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex flex-col md:flex-row items-center justify-center min-h-screen px-6 py-20 pt-32 md:pt-20">
+        <!-- Text Content (left on desktop, below photo on mobile) -->
+        <div class="text-center md:text-left max-w-xl order-2 md:order-1 flex-1">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                <span class="gradient-text">Hi, I'm Lester Rivarez.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6">
+                Virtual Assistant • Technical Support Specialist • Web Developer
+            </p>
+            <p class="text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-8">
+                I empower businesses to thrive online by streamlining operations, solving tech challenges, and elevating your digital presence.
+            </p>
+            <a href="#contact" class="btn-3d bg-electric text-white px-8 py-3 rounded-full font-medium text-lg focus:outline-none focus:ring-2 focus:ring-electric focus:ring-offset-2">
+                Let's work together!
+            </a>
+        </div>
+        <!-- Profile Photo (right on desktop, top on mobile) -->
+        <div class="profile-photo w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden mb-8 md:mb-0 md:ml-12 shadow-lg order-1 md:order-2 flex-shrink-0 flex justify-center items-center">
+            <img src="assets/images/picture.png" alt="Profile photo" class="w-full h-full object-cover" />
+        </div>
+    </section>
+    <div class="w-full overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#3b82f6" fill-opacity="0.08" d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"></path>
+      </svg>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-white dark:bg-navy">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                <span class="gradient-text">About Me</span>
+            </h2>
+            <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
+                <div class="w-full md:w-5/12 animate-on-scroll fade-in-card flex justify-center items-center">
+                    <div class="about-img-card bg-white/70 dark:bg-navy/70 rounded-2xl shadow-xl backdrop-blur-md p-4 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-electric/40">
+                        <img src="assets/images/lesterpic.jpg" alt="Profile photo" class="profile-photo w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-electric transition-all duration-300 hover:shadow-lg hover:shadow-electric/60" aria-label="Profile photo illustration" role="img">
+                    </div>
+                </div>
+                <div class="hidden md:block vertical-accent-bar h-80 mx-4"></div>
+                <div class="w-full animate-on-scroll fade-in-card">
+                    <div class="about-text-card bg-white/70 dark:bg-navy/70 rounded-2xl shadow-xl backdrop-blur-md p-8 relative">
+                        <div class="hidden md:block absolute -left-4 top-8 h-24 w-1 rounded bg-electric"></div>
+                        <h3 class="text-2xl font-bold mb-4 text-navy dark:text-white">About Me</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                            I'm a passionate Virtual Assistant, Technical Support Specialist, and Web Developer dedicated to helping businesses grow and thrive online. I love solving problems, streamlining processes, and making technology work for people.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                            My approach is rooted in clear communication, reliability, and a genuine desire to see my clients succeed. I believe in continuous learning and always strive to stay ahead of the curve in tech and support best practices.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            When I'm not working, you'll find me exploring new tech, contributing to open-source projects, or cooking.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="w-full overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#3b82f6" fill-opacity="0.08" d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"></path>
+      </svg>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-softblue dark:bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                <span class="gradient-text">My Projects</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="card rounded-xl overflow-hidden relative animate-on-scroll">
+                    <div class="h-48 bg-electric flex items-center justify-center">
+                        <svg class="w-24 h-24 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy dark:text-white mb-2">E-commerce Dashboard</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">A comprehensive dashboard for managing online store operations and analytics.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">React</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Node.js</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300">MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="card-overlay rounded-xl">
+                        <h3 class="text-xl font-bold text-white mb-4">E-commerce Dashboard</h3>
+                        <p class="text-gray-200 mb-6 text-center">Developed a full-stack e-commerce dashboard with real-time analytics, inventory management, and order processing.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-electric bg-white bg-opacity-20 p-2 rounded-full transition-all duration-300">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-electric bg-white bg-opacity-20 p-2 rounded-full transition-all duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="card rounded-xl overflow-hidden relative animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="h-48 bg-navy flex items-center justify-center">
+                        <svg class="w-24 h-24 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path>
+                            <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy dark:text-white mb-2">Support Ticket System</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">A customer support platform with ticket management and automated responses.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Vue.js</span>
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Laravel</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="card-overlay rounded-xl">
+                        <h3 class="text-xl font-bold text-white mb-4">Support Ticket System</h3>
+                        <p class="text-gray-200 mb-6 text-center">Built a responsive support ticket system with real-time notifications, knowledge base integration, and performance analytics.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-electric bg-white bg-opacity-20 p-2 rounded-full transition-all duration-300">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-electric bg-white bg-opacity-20 p-2 rounded-full transition-all duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="card rounded-xl overflow-hidden relative animate-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="h-48 bg-gradient-to-r from-electric to-navy flex items-center justify-center">
+                        <svg class="w-24 h-24 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy dark:text-white mb-2">Portfolio Website Builder</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">A drag-and-drop website builder for creating professional portfolios.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">React</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-pink-900 dark:text-pink-300">GraphQL</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">AWS</span>
+                        </div>
+                    </div>
+                    <div class="card-overlay rounded-xl">
+                        <h3 class="text-xl font-bold text-white mb-4">Portfolio Website Builder</h3>
+                        <p class="text-gray-200 mb-6 text-center">Created an intuitive drag-and-drop website builder with customizable templates, SEO tools, and analytics dashboard.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-electric bg-white bg-opacity-20 p-2 rounded-full transition-all duration-300">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-electric bg-white bg-opacity-20 p-2 rounded-full transition-all duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#3b82f6" fill-opacity="0.08" d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"></path>
+      </svg>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 bg-white dark:bg-navy">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                <span class="gradient-text">My Skills</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Technical Support Skills -->
+                <div class="skill-card rounded-xl p-6 animate-on-scroll fade-in-card glass-card hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-6 text-navy dark:text-white flex items-center">
+                        <i class="fas fa-headset text-electric mr-3"></i>
+                        Technical Support
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-network-wired text-electric mr-2"></i>DNS Configuration</li>
+                        <li class="flex items-center"><i class="fas fa-server text-electric mr-2"></i>cPanel</li>
+                        <li class="flex items-center"><i class="fas fa-bullhorn text-electric mr-2"></i>Website + Email Marketing
+                        <li class="flex items-center"><i class="fab fa-wordpress text-electric mr-2"></i>WordPress</li>
+                        <li class="flex items-center"><i class="fab fa-microsoft text-electric mr-2"></i>Microsoft 365 email and office</li>
+                    </ul>
+                </div>
+                <!-- Development Skills -->
+                <div class="skill-card rounded-xl p-6 animate-on-scroll fade-in-card glass-card hover:scale-105 hover:shadow-2xl transition-transform duration-300" style="animation-delay: 0.2s;">
+                    <h3 class="text-xl font-bold mb-6 text-navy dark:text-white flex items-center">
+                        <i class="fas fa-code text-electric mr-3"></i>
+                        Development
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fab fa-html5 text-electric mr-2"></i>HTML/CSS</li>
+                        <li class="flex items-center"><i class="fab fa-js text-electric mr-2"></i>JavaScript</li>
+                        <li class="flex items-center"><i class="fab fa-php text-electric mr-2"></i>PHP</li>
+                        <li class="flex items-center"><i class="fas fa-database text-electric mr-2"></i>MySQL</li>
+                    </ul>
+                </div>
+                <!-- Design & AI Tools -->
+                <div class="skill-card rounded-xl p-6 animate-on-scroll fade-in-card glass-card hover:scale-105 hover:shadow-2xl transition-transform duration-300" style="animation-delay: 0.4s;">
+                    <h3 class="text-xl font-bold mb-6 text-navy dark:text-white flex items-center">
+                        <i class="fas fa-paint-brush text-electric mr-3"></i>
+                        Design & AI Tools
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-paint-brush text-electric mr-2"></i>Adobe Photoshop</li>
+                        <li class="flex items-center"><i class="fas fa-bezier-curve text-electric mr-2"></i>Adobe Illustrator</li>
+                        <li class="flex items-center"><i class="fas fa-palette text-electric mr-2"></i>Canva</li>
+                        <li class="flex items-center"><i class="fas fa-robot text-electric mr-2"></i>ChatGPT</li>
+                        <li class="flex items-center"><i class="fas fa-brain text-electric mr-2"></i>GitHub Copilot</li>
+                        <li class="flex items-center"><i class="fas fa-magic text-electric mr-2"></i>MS365 Copilot</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#3b82f6" fill-opacity="0.08" d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"></path>
+      </svg>
+    </div>
+
+    <!-- Testimonial Section -->
+    <section id="testimonials" class="py-20 px-6 bg-white dark:bg-navy">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                <span class="gradient-text">Testimonials</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card rounded-xl p-8 flex flex-col items-center text-center animate-on-scroll">
+                    <div class="w-20 h-20 rounded-full mb-4 border-4 border-electric bg-orange-200 flex items-center justify-center">
+                        <span class="text-4xl font-bold text-navy dark:text-white">BB</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-200 mb-4 italic">
+                        <i class="fas fa-quote-left text-electric mr-2"></i>
+                        I had a problem with a website setup and I called in to Go Daddy and was lucky enough to get a fellow named Lester as my support representative! He was beyond great with his knowledge and skills. More importantly he actually made me feel like my business was of the utmost importance to him! In a world where most tech support people make you feel like you're bothering them to help you, Lester went above and beyond to help me and its folks like him that makes me want to do business with Go Daddy!
+                        <i class="fas fa-quote-right text-electric ml-2"></i>
+                    </p>
+                    <div class="flex justify-center mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <span class="font-bold text-navy dark:text-white">Bud Burnett</span>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="card rounded-xl p-8 flex flex-col items-center text-center animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="w-20 h-20 rounded-full mb-4 border-4 border-electric bg-green-200 flex items-center justify-center">
+                        <span class="text-4xl font-bold text-navy dark:text-white">LL</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-200 mb-4 italic">
+                        <i class="fas fa-quote-left text-electric mr-2"></i>
+                        Lester - godaddy.com, I was having issues at 2AM with some of my accounts that needed attention, I communicated with Lester, he calmly, professionally, most kindly, talked me through everything perfectly. I am 1 of the happiest people in the world right now. Lester is what godaddy.com exemplifies. He is an Ingenious True Scholar – True Professional *****A+ Impeccable.
+                        <i class="fas fa-quote-right text-electric ml-2"></i>
+                    </p>
+                    <div class="flex justify-center mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <span class="font-bold text-navy dark:text-white">Lizzy Lizzes</span>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="card rounded-xl p-8 flex flex-col items-center text-center animate-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="w-20 h-20 rounded-full mb-4 border-4 border-electric bg-purple-200 flex items-center justify-center">
+                        <span class="text-4xl font-bold text-navy dark:text-white">RL</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-200 mb-4 italic">
+                        <i class="fas fa-quote-left text-electric mr-2"></i>
+                        It was the agent who fixed everything- 'Lester'. Thank you so very much. You had to deal with me and the problem. You did it!!! No one before you could do what you did. My greatest respect goes to you for your perserverance, coolness, manners and your KNOWLEDGE; it blows me away how you directly attacked the problem and Solved it!!!.
+                        <i class="fas fa-quote-right text-electric ml-2"></i>
+                    </p>
+                    <div class="flex justify-center mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <span class="font-bold text-navy dark:text-white">Rosalie Learmont</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center mt-6">
+      <a href="https://www.trustpilot.com/review/www.godaddy.com?search=Lester" target="_blank" rel="noopener" class="text-electric underline hover:text-navy flex items-center justify-center gap-2">
+        <i class="fab fa-trustpilot text-green-500 text-xl" aria-hidden="true"></i>
+        See more reviews for Lester on Trustpilot
+      </a>
+    </div>
+
+    <div class="w-full overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#3b82f6" fill-opacity="0.08" d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"></path>
+      </svg>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-softblue dark:bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                <span class="gradient-text">Get In Touch</span>
+            </h2>
+            
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="w-full lg:w-1/2 animate-on-scroll">
+                    <form class="contact-form rounded-xl p-8" action="https://formspree.io/f/mldnvgee" method="POST">
+                        <div class="mb-6">
+                            <label for="name" class="block text-navy dark:text-white mb-2 font-medium">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input w-full px-4 py-3 rounded-lg" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-navy dark:text-white mb-2 font-medium">Your Email</label>
+                            <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 rounded-lg" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-navy dark:text-white mb-2 font-medium">Your Message</label>
+                            <textarea id="message" name="message" rows="5" class="form-input w-full px-4 py-3 rounded-lg" placeholder="How can I help you?" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-3d bg-electric text-white w-full py-3 rounded-lg font-medium text-lg flex items-center justify-center">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                   
+            </div>
+                
+                <div class="w-full lg:w-1/2 animate-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="h-full flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-6 text-navy dark:text-white">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-electric flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-navy dark:text-white">Email</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">rivarezlester019@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-electric flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-navy dark:text-white">Phone</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">+63 910 519 6862</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-electric flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-navy dark:text-white">Location</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Pasig City, Philippines</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="text-lg font-medium text-navy dark:text-white mb-4">Connect With Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://linkedin.com/in/lester-rivarez-567484372" class="social-icon w-12 h-12 rounded-full bg-navy dark:bg-electric flex items-center justify-center text-white" aria-label="LinkedIn" rel="noopener" target="_blank">
+                                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="social-icon w-12 h-12 rounded-full bg-navy dark:bg-electric flex items-center justify-center text-white" aria-label="GitHub" rel="noopener" target="_blank">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="social-icon w-12 h-12 rounded-full bg-navy dark:bg-electric flex items-center justify-center text-white" aria-label="Twitter" rel="noopener" target="_blank">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="social-icon w-12 h-12 rounded-full bg-navy dark:bg-electric flex items-center justify-center text-white" aria-label="Instagram" rel="noopener" target="_blank">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://www.facebook.com/retsel.zeravir" class="social-icon w-12 h-12 rounded-full bg-navy dark:bg-electric flex items-center justify-center text-white" aria-label="Facebook" rel="noopener" target="_blank">
+                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#3b82f6" fill-opacity="0.08" d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"></path>
+      </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-10 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="assets/images/lester-logo.png" alt="Lester Rivarez Logo" class="h-12 w-auto logo-glow">
+                </div>
+                
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <p class="text-gray-600 dark:text-gray-300">© 2025 Lester Rivarez. All rights reserved.</p>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="https://linkedin.com/in/lester-rivarez-567484372" class="social-icon w-10 h-10 rounded-full bg-navy dark:bg-electric flex items-center justify-center text-white" aria-label="LinkedIn" rel="noopener" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon w-10 h-10 rounded-full bg-navy dark:bg-electric flex items-center justify-center text-white" aria-label="GitHub" rel="noopener" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-icon w-10 h-10 rounded-full bg-navy dark:bg-electric flex items-center justify-center text-white" aria-label="Twitter" rel="noopener" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon w-10 h-10 rounded-full bg-navy dark:bg-electric flex items-center justify-center text-white" aria-label="Instagram" rel="noopener" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/retsel.zeravir" class="social-icon w-10 h-10 rounded-full bg-navy dark:bg-electric flex items-center justify-center text-white" aria-label="Facebook" rel="noopener" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script src="assets/js/main.js"></script>
+  <!-- External scripts like Google Analytics can stay here -->
+</body>
+</html>

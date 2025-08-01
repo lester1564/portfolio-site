@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lester Rivarez - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .resume-container {
+            display: flex;
+            max-width: 1000px;
+            margin: 30px auto;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: white;
+        }
+        
+        .sidebar {
+            width: 35%;
+            background-color: #1a365d; /* Navy blue */
+            color: white;
+            padding: 40px 25px;
+        }
+        
+        .main-content {
+            width: 65%;
+            padding: 40px 35px;
+            background-color: white;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #e2e8f0;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .contact-info {
+            margin-bottom: 35px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+        
+        .contact-item i {
+            width: 25px;
+            margin-right: 10px;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        
+        .sidebar .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .main-content .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #1a365d;
+        }
+        
+        .skills-list {
+            list-style: none;
+        }
+        
+        .skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .skill-item i {
+            width: 25px;
+            margin-right: 10px;
+            text-align: center;
+        }
+        
+        .skills-section {
+            margin-bottom: 10px;
+        }
+        
+        .skills-category {
+            margin-bottom: 15px;
+        }
+        
+        .skills-category-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .certifications-list {
+            list-style: none;
+        }
+        
+        .certification-item {
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+        
+        .header {
+            margin-bottom: 40px;
+        }
+        
+        .name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-size: 1.1rem;
+            color: #4a5568;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .summary {
+            margin-bottom: 30px;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+        }
+        
+        .company, .school {
+            font-weight: 600;
+            color: #1a365d;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .position, .degree {
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #4a5568;
+        }
+        
+        .responsibilities, .languages, .interests {
+            list-style: none;
+        }
+        
+        .responsibilities li, .languages li, .interests li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .responsibilities li::before, .languages li::before, .interests li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #1a365d;
+            font-weight: bold;
+        }
+        
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .interest-item {
+            background-color: #e2e8f0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .interest-item i {
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .resume-container {
+                flex-direction: column;
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .sidebar, .main-content {
+                width: 100%;
+            }
+        }
+        
+        @media print {
+            html, body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
+                background: white !important;
+            }
+            body {
+                color: #333 !important;
+                background: white !important;
+            }
+            .resume-container {
+                /* Remove box-shadow, border-radius, and margin for print */
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                margin: 0 !important;
+                width: 210mm !important;
+                min-width: 210mm !important;
+                max-width: 210mm !important;
+                height: 297mm !important;
+                min-height: 297mm !important;
+                max-height: 297mm !important;
+                background: white !important;
+                display: flex !important;
+                flex-direction: row !important;
+                page-break-after: avoid;
+                /* Scale to fit A4 exactly, removing all excess margin */
+                position: absolute !important;
+                left: 0; top: 0;
+                transform: none !important;
+            }
+            .sidebar {
+                width: 35% !important;
+                background: #1a365d !important;
+                color: white !important;
+                padding: 40px 25px !important;
+            }
+            .main-content {
+                width: 65% !important;
+                background: white !important;
+                color: #333 !important;
+                padding: 30px 18px !important;
+                font-size: 0.85rem !important;
+                line-height: 1.3 !important;
+            }
+            .profile-img {
+                width: 120px !important;
+                height: 120px !important;
+                margin: 0 auto 18px !important;
+                border-radius: 50% !important;
+                box-shadow: none !important;
+            }
+            .profile-img img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                border-radius: 50% !important;
+            }
+            .section-title {
+                font-size: 1rem !important;
+                font-weight: 600 !important;
+                margin-bottom: 10px !important;
+                position: relative !important;
+                padding-bottom: 5px !important;
+                page-break-inside: avoid !important;
+            }
+            .sidebar .section-title::after {
+                width: 40px !important;
+                height: 2px !important;
+                background-color: rgba(255, 255, 255, 0.5) !important;
+            }
+            .main-content .section-title::after {
+                width: 40px !important;
+                height: 2px !important;
+                background-color: #1a365d !important;
+            }
+            .name {
+                font-size: 1.3rem !important;
+                font-weight: 700 !important;
+                color: #1a365d !important;
+                margin-bottom: 3px !important;
+                page-break-inside: avoid !important;
+            }
+            .job-title {
+                font-size: 0.95rem !important;
+                color: #4a5568 !important;
+                font-weight: 500 !important;
+                margin-bottom: 10px !important;
+                page-break-inside: avoid !important;
+            }
+            .summary {
+                margin-bottom: 15px !important;
+                color: #4a5568 !important;
+                font-size: 0.85rem !important;
+                page-break-inside: avoid !important;
+            }
+            .experience-section, .education-section, .certifications-section, .languages-section, .skills-section, .contact-info {
+                page-break-inside: avoid !important;
+            }
+            .experience-item, .education-item {
+                margin-bottom: 14px !important;
+                page-break-inside: avoid !important;
+            }
+            .company, .school {
+                font-weight: 600 !important;
+                color: #1a365d !important;
+                margin-bottom: 3px !important;
+                display: flex !important;
+                justify-content: space-between !important;
+                page-break-inside: avoid !important;
+            }
+            .position, .degree {
+                font-weight: 500 !important;
+                font-style: italic !important;
+                margin-bottom: 6px !important;
+                color: #4a5568 !important;
+                page-break-inside: avoid !important;
+            }
+            .responsibilities li, .languages li {
+                margin-bottom: 5px !important;
+                position: relative !important;
+                padding-left: 14px !important;
+                font-size: 0.8rem !important;
+                page-break-inside: avoid !important;
+            }
+            .responsibilities li::before, .languages li::before {
+                content: '•' !important;
+                position: absolute !important;
+                left: 0 !important;
+                color: #1a365d !important;
+                font-weight: bold !important;
+            }
+            .skills-list {
+                list-style: none !important;
+            }
+            .skill-item {
+                display: flex !important;
+                align-items: center !important;
+                margin-bottom: 8px !important;
+                page-break-inside: avoid !important;
+            }
+            .skill-item i {
+                width: 18px !important;
+                margin-right: 6px !important;
+                text-align: center !important;
+            }
+            .skills-section {
+                margin-bottom: 7px !important;
+            }
+            .skills-category {
+                margin-bottom: 10px !important;
+            }
+            .skills-category-title {
+                font-size: 0.8rem !important;
+                font-weight: 600 !important;
+                margin-bottom: 4px !important;
+                color: rgba(255, 255, 255, 0.8) !important;
+            }
+            .certifications-list {
+                list-style: none !important;
+            }
+            .certification-item {
+                margin-bottom: 6px !important;
+                font-size: 0.8rem !important;
+                page-break-inside: avoid !important;
+            }
+            .header {
+                margin-bottom: 12px !important;
+                page-break-inside: avoid !important;
+            }
+            .contact-info {
+                margin-bottom: 12px !important;
+            }
+            .contact-item {
+                display: flex !important;
+                align-items: center !important;
+                margin-bottom: 7px !important;
+                font-size: 0.8rem !important;
+                page-break-inside: avoid !important;
+            }
+            .contact-item i {
+                width: 18px !important;
+                margin-right: 6px !important;
+                text-align: center !important;
+            }
+            .btn-download, .btn-view, [style*="position: fixed"], nav, .no-print {
+                display: none !important;
+            }
+            a {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PDF Download/View Buttons (Top Right) -->
+    <div style="position: fixed; top: 24px; right: 32px; z-index: 1000; display: flex; gap: 12px;">
+        <a href="assets/lester_rivarez_resume.pdf" download class="btn-download" style="background:#1a365d;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:600;box-shadow:0 2px 8px rgba(26,54,93,0.08);transition:background 0.2s;">Download PDF</a>
+    </div>
+
+    <div class="resume-container">
+        <!-- Left Column (Sidebar) -->
+        <div class="sidebar">
+            <!-- Profile Photo -->
+            <div class="profile-img">
+                <img src="assets/images/picture.png" alt="Professional LinkedIn Headshot" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2 class="section-title">CONTACT</h2>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:rivarezlester019@gmail.com">rivarezlester019@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>+63 910 519 6862</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>268 Dr. Sixto Ave, Caniogan, Pasig City, Philippines</span>
+                </div>
+            </div>
+            
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <h2 class="section-title">SKILLS</h2>
+                
+                <div class="skills-category">
+                    <div class="skills-category-title">Technical Support</div>
+                    <ul class="skills-list">
+                        <li class="skill-item"><i class="fas fa-network-wired"></i> DNS Configuration</li>
+                        <li class="skill-item"><i class="fas fa-server"></i> cPanel</li>
+                        <li class="skill-item"><i class="fas fa-bullhorn"></i> Website + Email Marketing</li>
+                        <li class="skill-item"><i class="fab fa-wordpress"></i> WordPress</li>
+                        <li class="skill-item"><i class="fab fa-microsoft"></i> Microsoft 365</li>
+                    </ul>
+                </div>
+                
+                <div class="skills-category">
+                    <div class="skills-category-title">Development</div>
+                    <ul class="skills-list">
+                        <li class="skill-item"><i class="fas fa-code"></i> HTML/CSS</li>
+                        <li class="skill-item"><i class="fab fa-js"></i> JavaScript</li>
+                        <li class="skill-item"><i class="fab fa-php"></i> PHP</li>
+                        <li class="skill-item"><i class="fas fa-database"></i> MySQL</li>
+                    </ul>
+                </div>
+                
+                <div class="skills-category">
+                    <div class="skills-category-title">Design & AI Tools</div>
+                    <ul class="skills-list">
+                        <li class="skill-item"><i class="fas fa-paint-brush"></i> Adobe Photoshop</li>
+                        <li class="skill-item"><i class="fas fa-bezier-curve"></i> Adobe Illustrator</li>
+                        <li class="skill-item"><i class="fas fa-palette"></i> Canva</li>
+                        <li class="skill-item"><i class="fas fa-robot"></i> ChatGPT</li>
+                        <li class="skill-item"><i class="fas fa-brain"></i> GitHub Copilot</li>
+                        <li class="skill-item"><i class="fas fa-magic"></i> MS365 Copilot</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column (Main Content) -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="name">LESTER R. RIVAREZ</h1>
+                <div class="job-title">Virtual Assistant | Technical Support Specialist | Web Administrator</div>
+                
+                <!-- Professional Summary -->
+                <div class="summary">
+                    A former GoDaddy Guide with over 3 years of experience supporting small to medium businesses. Expert in domain/DNS management, web/email troubleshooting, WordPress & cPanel site deployment, and client communications. Known for being detail-oriented, adaptable, and technically skilled.
+                </div>
+            </div>
+            
+            <!-- Work Experience -->
+            <div class="experience-section">
+                <h2 class="section-title">WORK EXPERIENCE</h2>
+                
+                <div class="experience-item">
+                    <div class="company">
+                        <span>Sutherland Global Services Inc. (GoDaddy Support)</span>
+                        <span>Apr 2022 – Present</span>
+                    </div>
+                    <div class="position">Technical Support Specialist</div>
+                    <ul class="responsibilities">
+                        <li>DNS, Email, cPanel troubleshooting and guidance</li>
+                        <li>Domain and hosting configuration</li>
+                        <li>Client consultation on GoDaddy products</li>
+                        <li>Resolving complex technical issues for small business owners</li>
+                        <li>Providing step-by-step guidance for website management</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="company">
+                        <span>Sykes Asia Inc.</span>
+                        <span>Aug 2019 – Sep 2022</span>
+                    </div>
+                    <div class="position">Technical Support Representative</div>
+                    <ul class="responsibilities">
+                        <li>Chat/email tech support (Expedia, Capital One, Just Eat)</li>
+                        <li>Personalized customer assistance and documentation</li>
+                        <li>Troubleshooting account and platform issues</li>
+                        <li>Creating detailed documentation for customer inquiries</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Education -->
+            <div class="education-section" style="margin-top: 20px; margin-bottom: 16px;">
+                <h2 class="section-title">EDUCATION</h2>
+                
+                <div class="education-item">
+                    <div class="school">
+                        <span>Cainta Catholic College</span>
+                        <span>2016 – 2019</span>
+                    </div>
+                    <div class="degree">BS in Computer Science</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="school">
+                        <span>Datamex Institute</span>
+                        <span>2012 – 2013</span>
+                    </div>
+                    <div class="degree">Computer Technology</div>
+                </div>
+            </div>
+            <!-- Certifications and Languages at the bottom, no flex spacer -->
+            <div class="certifications-section" style="margin-top: 0; margin-bottom: 8px;">
+                <h2 class="section-title">CERTIFICATIONS</h2>
+                <ul class="certifications-list">
+                    <li class="certification-item">GoDaddy Product Certification</li>
+                    <li class="certification-item">Best Programmer and Technological Innovation Award</li>
+                </ul>
+            </div>
+            <div class="languages-section" style="margin-top: 0; margin-bottom: 0;">
+                <h2 class="section-title">LANGUAGES</h2>
+                <ul class="languages">
+                    <li>English (Professional)</li>
+                    <li>Filipino (Native)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
